@@ -50,7 +50,7 @@ data = {"auth": {
 }
 headers = {'Content-type': "application/json", 'Accept': 'text/plain'}
 r = requests.post(url, data=json.dumps(data), headers=headers)
-token = r.headers['X-Subject-Token']
+token = r.headers['x-subject-token']
 url = "https://" + domain + ":8774/v2.1/os-server-groups"
 headers = {'X-Auth-Token': token}
 r = requests.get(url, headers=headers)
@@ -77,7 +77,7 @@ if os.environ['PERCENT'] == '':
 else:
     percent = int(os.environ['PERCENT'])
 
-print('\nReboot machines without groups')
+print('\nReboot machines in server groups')
 rebootMachinesObj = RebootMachinesObj(sList, computerListObjects, close_time, percent)
 rebootMachinesObj.reboot_percent_machines()
 print('-' * 40)
