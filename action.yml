@@ -1,0 +1,7 @@
+  
+  name: 'Godzilla'
+  description: 'Godzilla perform chaos'
+  author: 'Viaceslav Kodesh'
+  runs:
+    using: 'docker'
+    image: 'Dockerfile'
