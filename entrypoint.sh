@@ -1,2 +1,2 @@
 #!/bin/sh
-python /action.py
+python3 /action.py
