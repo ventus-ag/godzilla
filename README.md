@@ -24,7 +24,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: OpenStack Chaos Action
-      uses: Viaceslav-Kodesh/Godzilla@master
+      uses: ventus-ag/godzilla@master
       env:
           DELAY: ${{5}}  #minutes
           PERCENT: ${{50}}
