@@ -86,11 +86,11 @@ if os.environ['PERCENT'] == '':
 else:
     percent = int(os.environ['PERCENT'])
 
-print('\nReboot machines in server groups')
+print('\nReboot machines')
 rebootMachinesObj = RebootMachinesObj(sList, computerListObjects, close_time, percent)
 rebootMachinesObj.reboot_percent_machines()
 print('-' * 40)
-print('\nReboot machines')
+print('\nReboot machines in server groups')
 reboot_groups = RebootGroupsObj(nova_client, computerListObjects, close_time, percent)
 reboot_groups.reboot_percent_machines()
 print('-' * 40)
